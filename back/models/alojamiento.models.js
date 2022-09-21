@@ -26,8 +26,8 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.NUMBER,
       allowNull: false,
     },
-    tipo: {
-      type: DataTypes.STRING,
+    tipo_alojamiento: {
+      type: DataTypes.INTIGER,
       allowNull: false,
     },
   }, {
