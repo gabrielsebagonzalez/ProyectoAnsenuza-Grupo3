@@ -22,14 +22,15 @@ import { FooterModule } from './modules/footer/footer.module';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-   NavbarModule,
-   AlojamientosModule,
-   GastronomiaModule,
-   AgenciasModule,
-   AtractivosModule,
-   ActividadesModule,
-   HomeModule,
-   FooterModule
+    CoreModule,
+    NavbarModule,
+    AlojamientosModule,
+    GastronomiaModule,
+    AgenciasModule,
+    AtractivosModule,
+    ActividadesModule,
+    HomeModule,
+    FooterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
