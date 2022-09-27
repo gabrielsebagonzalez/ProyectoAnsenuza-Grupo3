@@ -4,8 +4,8 @@
  * @param {*} res Response Obj.
  */
 function handler(req, res) {
-  res.statusCode = 404;
-  res.json({ error: 'not_found', message: 'resource not found' });
+  res.statusCode = 200;
+  res.json({ status: res.statusCode, message: 'ok' });
 }
 module.exports.handler = handler;
 

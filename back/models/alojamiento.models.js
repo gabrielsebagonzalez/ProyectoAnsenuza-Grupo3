@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
     },
     tipo_alojamiento: {
-      type: DataTypes.INTIGER,
+      type: DataTypes.INTEGER(16),
       allowNull: false,
     },
   }, {
