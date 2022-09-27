@@ -13,6 +13,8 @@ import { AtractivosModule } from './modules/atractivos/atractivos.module';
 import { ActividadesModule} from './modules/actividades/actividades.module';
 import { HomeModule } from './modules/home/home.module';
 import { FooterModule } from './modules/footer/footer.module';
+import { CarouselModule } from './modules/carousel/carousel.module';
+
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import { FooterModule } from './modules/footer/footer.module';
     ActividadesModule,
     HomeModule,
     FooterModule
+    CarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
