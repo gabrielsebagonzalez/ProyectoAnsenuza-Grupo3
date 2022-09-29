@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { NavbarRoutingModule } from './navbar-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
+import { CarouselModule } from '../carousel/carousel.module';
 
 
 @NgModule({
@@ -11,7 +12,7 @@ import { NavbarComponent } from './navbar/navbar.component';
   ],
   imports: [
     CommonModule,
-    NavbarRoutingModule
+    NavbarRoutingModule,
   ],
   exports:[
     NavbarComponent
