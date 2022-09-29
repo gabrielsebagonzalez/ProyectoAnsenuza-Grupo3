@@ -1,38 +1,28 @@
+'use strict';
+const {
+  Model
+} = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  const alojamiento = sequelize.define('alojamiento', {
-    id: {
-      type: DataTypes.INTEGER(16),
-      autoIncrement: true,
-      allowNull: false,
-      primaryKey: true,
-    },
-    nombre: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    descripcion: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    ubicacion: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    telefono: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    precio: {
-      type: DataTypes.NUMBER,
-      allowNull: false,
-    },
-    tipo_alojamiento: {
-      type: DataTypes.INTEGER(16),
-      allowNull: false,
-    },
+  class Alojamiento extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static associate(models) {
+      // define association here
+    }
+  };
+  Alojamiento.init({
+    name: DataTypes.STRING,
+    description: DataTypes.STRING,
+    ubication: DataTypes.STRING,
+    phoneNumber: DataTypes.STRING,
+    tipoAlojamiento: DataTypes.INTEGER,
+
   }, {
-    timestamps: true,
-    tableName: 'alojamiento',
+    sequelize,
+    modelName: 'Alojamiento',
   });
-  return alojamiento;
+  return Alojamiento;
 };

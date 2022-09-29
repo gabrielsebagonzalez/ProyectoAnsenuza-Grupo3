@@ -3,13 +3,11 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('tipo_alojamiento.models', {
       id: {
-        allowNull: false,
+        type: Sequelize.INTEGER.UNSIGNED,
+        comment: 'Primary key: Unique user ID.',
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
-      },
-      id: {
-        type: Sequelize.NUMBER
+        allowNull: false,
       },
       tipo: {
         type: Sequelize.STRING
