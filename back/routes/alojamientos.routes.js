@@ -1,4 +1,5 @@
 const Express = require('express');
+const alojamientoController = require('../controllers/alojamiento.controllers');
 
 const app = Express();
 
@@ -83,9 +84,7 @@ const dataFalse = {
 
 };
 
-app.get('', (_, res) => {
-  res.send(JSON.stringify(dataFalse));
-});
+app.get('', alojamientoController.alojamientosInfo);
 
 app.post('', (_, res) => {
   res.send('Creando Alojamiento...');

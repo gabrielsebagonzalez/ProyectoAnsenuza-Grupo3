@@ -11,7 +11,7 @@ const userRoute = require('./user.routes');
 const alojamientosRoute = require('./alojamientos.routes');
 
 // use=
-app.use('/ping', (req, res) => {
+app.use('/ping', (_, res) => {
   res.json({
     response: 'pong!',
   });
