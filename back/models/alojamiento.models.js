@@ -11,6 +11,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Alojamiento.belongsTo(models.TipoAlojamiento,
+        {
+          foreignKey: 'tipoAlojamientoId',
+        });
     }
   };
   Alojamiento.init({
@@ -18,7 +22,10 @@ module.exports = (sequelize, DataTypes) => {
     description: DataTypes.STRING,
     ubication: DataTypes.STRING,
     phoneNumber: DataTypes.STRING,
-    tipoAlojamiento: DataTypes.INTEGER,
+    tipoAlojamientoId: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
 
   }, {
     sequelize,

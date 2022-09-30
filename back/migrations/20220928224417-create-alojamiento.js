@@ -21,8 +21,13 @@ module.exports = {
       phoneNumber: {
         type: Sequelize.STRING
       },
-      tipoAlojamiento: {
-        type: Sequelize.INTEGER
+      tipoAlojamientoId: {
+        type: Sequelize.INTEGER,
+        allowNull: true,
+        references: {
+          model: 'TipoAlojamientos',
+          key: 'id'
+     },
       },
       createdAt: {
         allowNull: false,

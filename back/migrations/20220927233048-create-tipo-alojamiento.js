@@ -1,15 +1,14 @@
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('tipo_alojamiento.models', {
+    await queryInterface.createTable('TipoAlojamientos', {
       id: {
-        type: Sequelize.INTEGER.UNSIGNED,
-        comment: 'Primary key: Unique user ID.',
+        allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        allowNull: false,
+        type: Sequelize.INTEGER
       },
-      tipo: {
+      name: {
         type: Sequelize.STRING
       },
       createdAt: {
@@ -23,6 +22,6 @@ module.exports = {
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('tipo_alojamiento.models');
+    await queryInterface.dropTable('TipoAlojamientos');
   }
 };

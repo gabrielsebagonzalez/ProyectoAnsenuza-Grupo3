@@ -9,7 +9,7 @@ async function findHoteles() {
   const hoteles = await alojamientoModel.findAll(
     {
       where: {
-        tipoAlojamiento: 1
+        tipoAlojamientoId: 1
       }
     });
   
@@ -20,7 +20,7 @@ async function findApartamentos() {
   const apartamentos = await alojamientoModel.findAll(
     {
       where: {
-        tipoAlojamiento: 2
+        tipoAlojamientoId: 2
       }
     });
   
@@ -31,7 +31,7 @@ async function findCasas() {
   const casas = await alojamientoModel.findAll(
     {
       where: {
-        tipoAlojamiento: 3
+        tipoAlojamientoId: 3
       }
     });
   
@@ -42,7 +42,7 @@ async function findCabanas() {
   const cabanas = await alojamientoModel.findAll(
     {
       where: {
-        tipoAlojamiento: 4
+        tipoAlojamientoId: 4
       }
     });
   
@@ -53,7 +53,7 @@ async function findHostales() {
   const hostales = await alojamientoModel.findAll(
     {
       where: {
-        tipoAlojamiento: 5
+        tipoAlojamientoId: 5
       }
     });
   
@@ -64,7 +64,7 @@ async function findCampings() {
   const campings = await alojamientoModel.findAll(
     {
       where: {
-        tipoAlojamiento: 6
+        tipoAlojamientoId: 6
       }
     });
   
@@ -78,7 +78,7 @@ async function createAlojamiento() {
       description: "Test 1",
       ubication: "Test 1",
       phoneNumber: "123456789",
-      tipoAlojamiento: 1,
+      tipoAlojamientoId: 5,
       createdAt: new Date(),
       updatedAt: new Date(),
     }
