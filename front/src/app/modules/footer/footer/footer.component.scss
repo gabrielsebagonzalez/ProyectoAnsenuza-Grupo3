@@ -1,0 +1,33 @@
+
+.fijar {
+  bottom: 0; }
+
+.footer {
+  background-color: #A6A7AC;
+  color: white;
+  padding-left: 30px;
+  padding-right: 60px;
+  padding-bottom: 20px;
+  display: grid;
+  grid-template-columns: 400px 400px 450px;
+  justify-content: space-between;
+  justify-items: center;
+  transition: all 1s; }
+  .footer div ul {
+    padding-left: 0;
+    list-style-type: none; }
+    .footer a:hover {
+      color: black; }
+  .footer a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px; }
+  .footer h3 {
+    font-size: 20px;
+    margin-bottom: 15px; }
+
+.icon {
+  width: 30px;
+  padding-right: 10px; }
+
+
