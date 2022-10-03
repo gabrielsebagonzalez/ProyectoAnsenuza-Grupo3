@@ -36,3 +36,17 @@ p{
   background-size: cover;
   height: 15rem;
 }
+
+
+.contenedor-imagenes {
+  display: flex;
+  margin-top: 150px;
+  margin-bottom: 150px;
+  margin-left: 200px;
+  margin-right: 200px;
+  justify-content:space-evenly;
+}
+
+.contenedor-imagenes img:first-child {
+  margin-right: 10px;
+}
