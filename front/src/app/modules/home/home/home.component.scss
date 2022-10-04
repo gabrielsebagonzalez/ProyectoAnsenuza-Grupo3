@@ -1,19 +1,28 @@
 h1{
-  margin-top: 50px;
+  margin-top: 100px;
   color:#757575;
+}
+h2{
+  margin-top: 60px;
+  margin-left: 200px;
+  margin-right: 200px;
+  color:#757575;
+  font-size:20px;
 }
 h3{
   margin-top: 60px;
   margin-left: 200px;
   margin-right: 200px;
+  padding-left: 60px;
   color:#757575;
+  font-size:16px;
 }
 ul{
   margin-top: 30px;
   margin-left: 250px;
   margin-right: 250px;
   color:#757575;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .subtitle{
@@ -25,9 +34,20 @@ p{
   margin-left: 250px;
   margin-right: 250px;
   color:#757575;
-  font-size: 18px;
+  font-size: 16px;
 }
+.home-styles{
 
+  margin-right: 200px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.home-styles ul{
+  padding-top: 40px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 20px;
+}
 .bg-img{
   background-image: url(https://morteros.gob.ar/sites/default/files/imagen_destacada_home/aerea.jpg);
   background-repeat: no-repeat;
@@ -35,6 +55,23 @@ p{
   background-attachment: fixed;
   background-size: cover;
   height: 15rem;
+}
+
+div a{
+  text-decoration: none;
+  color: #757575;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div img{
+  padding: 20px;
+  transition: all 1s;
+}
+
+div img:hover{
+  transform: scale(1.1);
 }
 
 
