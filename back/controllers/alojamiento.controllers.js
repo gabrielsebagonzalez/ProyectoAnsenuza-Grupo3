@@ -73,6 +73,7 @@ const alojamientoProvider = require('../providers/alojamiento.providers');
   async function alojamientosNuevo(req, res, next) {
     try {
       await alojamientoProvider.setAlojamiento();
+      console.log(req.file);
     } catch (error) {
       next(error);
     }

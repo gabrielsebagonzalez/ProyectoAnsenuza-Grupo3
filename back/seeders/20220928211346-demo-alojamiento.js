@@ -3,58 +3,48 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('Alojamientos', [{
-      name: 'Casa Blanca',
+      name: 'Hotel España',
       description: 'Hermoso, cerca del lago',
-      ubication: 'Larrañaga 37',
-      phoneNumber: '351233223',
-      tipoAlojamientoId: 3,
-      createdAt: new Date(),
-      updatedAt: new Date(),
-    },
-    { 
-      name: 'Cuesta Grande',
-      description: 'Hermoso, cerca del lago',
-      ubication: 'Larrañaga 38',
-      phoneNumber: '351989898',
-      tipoAlojamientoId: 2,
-      createdAt: new Date(),
-      updatedAt: new Date(),
-    },
-    {
-      name: 'Doña Pocha',
-      description: 'Hermosa, Buena vista',
-      ubication: 'Salta 45',
-      phoneNumber: '351234454',
+      ubication: 'España 1466',
+      phoneNumber: '03562 402714',
       tipoAlojamientoId: 1,
       createdAt: new Date(),
       updatedAt: new Date(),
+      email: 'hotelespa-a@hotmail.com',
+      web: 'espanahotel.blogspot.com/'
     },
-    {
-      name: 'Don Carlos',
-      description: 'Hermosa, linda ubicación',
-      ubication: 'Laplace 202',
-      phoneNumber: '354234321',
-      tipoAlojamientoId: 4,
+    { 
+      name: 'Hotel Sarmiento',
+      description: 'Hermoso, cerca del lago',
+      ubication: 'Sarmiento 131',
+      phoneNumber: '03562 40-5201',
+      tipoAlojamientoId: 1,
       createdAt: new Date(),
       updatedAt: new Date(),
+      email: 'hotel-sarmiento@hotmail.com',
+      web: 'facebook.com/HotelSarmiento'
     },
     {
-      name: 'Isla Bonita',
-      description: 'Hermosa, linda ubicación',
-      ubication: 'Cuenca 312',
-      phoneNumber: '351768987',
-      tipoAlojamientoId: 6,
+      name: 'Hotel Constantino',
+      description: 'Hermosa, Buena vista',
+      ubication: 'Boulevard 9 de Julio 833',
+      phoneNumber: '-',
+      tipoAlojamientoId: 1,
       createdAt: new Date(),
       updatedAt: new Date(),
+      email: 'liz.esper@hotmail.com',
+      web: 'hotelconstantino.negocio.site'
     },
     {
-      name: 'Bella Vista',
+      name: 'Hostal del Sol',
       description: 'Hermosa, linda ubicación',
-      ubication: 'Cuenca 370',
-      phoneNumber: '351329807',
+      ubication: 'Bv. Hipolito Irigoyen 1203',
+      phoneNumber: '03562 42-2440',
       tipoAlojamientoId: 5,
       createdAt: new Date(),
       updatedAt: new Date(),
+      email: 'info@hostalmorteros.com.ar',
+      web: 'hostalmorteros.com.ar'
     }]);
   },
 
