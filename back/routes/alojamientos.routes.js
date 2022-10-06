@@ -2,12 +2,12 @@ const Express = require('express');
 const multer = require('multer');
 const alojamientoController = require('../controllers/alojamiento.controllers');
 
-const upload = multer({ dest: 'images/' });
+const upload = multer({ dest: './dist/images/' });
 const app = Express();
 
 app.get('', alojamientoController.alojamientosInfo);
 
-app.post('', upload.single('image') , alojamientoController.alojamientosNuevo);
+app.post('', upload.single('image'), alojamientoController.alojamientosNuevo);
 
 app.get('/hoteles', alojamientoController.alojamientosHoteles);
 
