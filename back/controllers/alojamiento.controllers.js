@@ -1,4 +1,5 @@
 const alojamientoProvider = require('../providers/alojamiento.providers');
+const fs = require('fs');
 
 /**
  *
@@ -71,13 +72,35 @@ const alojamientoProvider = require('../providers/alojamiento.providers');
   }
   
   async function alojamientosNuevo(req, res, next) {
+
+    const pathFile = req.file.path;
+
     try {
-      await alojamientoProvider.setAlojamiento();
+
+      fs.rename(`${pathFile}`, `${pathFile}.png`, function(err) {
+        if ( err ) console.log('ERROR: ' + err);
+      });
+
+      dataAlojamiento = {
+        name: req.body.name,
+        description: req.body.description,
+        ubication: req.body.ubication,
+        phoneNumber: req.body.phoneNumber,
+        tipoAlojamientoId: Number(req.body.tipoAlojamientoId),
+        email: req.body.email,
+        web: req.body.web,
+        imageURL: `${pathFile}.png`,
+      }
+      
+      await alojamientoProvider.setAlojamiento(dataAlojamiento);
+      
       console.log(req.file);
+      console.log(dataAlojamiento);
     } catch (error) {
       next(error);
     }
   }
+
 module.exports = {
     alojamientosInfo,
     alojamientosApartamentos,

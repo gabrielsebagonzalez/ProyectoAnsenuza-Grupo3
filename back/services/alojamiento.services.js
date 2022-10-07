@@ -71,16 +71,19 @@ async function findCampings() {
   return campings;
 }
 
-async function createAlojamiento() {
+async function createAlojamiento(dataAlojamiento) {
   const nuevoAlojamiento = await alojamientoModel.create(
-    { 
-      name: "Nuevo Alojamiento", 
-      description: "Test 1",
-      ubication: "Test 1",
-      phoneNumber: "123456789",
-      tipoAlojamientoId: 5,
+    dataAlojamiento = { 
+      name: dataAlojamiento.name, 
+      description: dataAlojamiento.description,
+      ubication: dataAlojamiento.ubication,
+      phoneNumber: dataAlojamiento.phoneNumber,
+      tipoAlojamientoId: dataAlojamiento.tipoAlojamientoId,
       createdAt: new Date(),
       updatedAt: new Date(),
+      email: dataAlojamiento.email,
+      web: dataAlojamiento.web,
+      imageURL: dataAlojamiento.imageURL,
     }
   );
   return nuevoAlojamiento;

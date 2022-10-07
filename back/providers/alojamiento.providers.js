@@ -28,8 +28,8 @@ async function getCampings(data) {
     return alojamientoService.findCampings();
 }
 
-async function setAlojamiento(data) {
-    return alojamientoService.createAlojamiento();
+async function setAlojamiento(dataAlojamiento) {
+    return alojamientoService.createAlojamiento(dataAlojamiento);
 }
 
 module.exports = {
