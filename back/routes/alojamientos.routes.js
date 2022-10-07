@@ -5,15 +5,14 @@ const alojamientoController = require('../controllers/alojamiento.controllers');
 const upload = multer({ dest: `images/` });
 const app = Express();
 
-app.use(Express.static('images'));
+app.use(Express.static(__dirname+`/images/`));
 
 app.get('', alojamientoController.alojamientosInfo);
 
 app.post('', upload.single('imageURL'), alojamientoController.alojamientosNuevo);
 
-app.get('/images', (req, res)=>{
-    console.log(__dirname);
-    res.sendFile(`${__dirname}/images/Sarmiento3.png`);
+app.get('/images/:img', function(req, res){
+    res.sendFile( __dirname+`/images/${img}` );
 });
 
 app.get('/hoteles', alojamientoController.alojamientosHoteles);
