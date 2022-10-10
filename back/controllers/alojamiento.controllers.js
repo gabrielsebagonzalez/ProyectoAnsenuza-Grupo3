@@ -94,8 +94,14 @@ const fs = require('fs');
       
       await alojamientoProvider.setAlojamiento(dataAlojamiento);
       
-      console.log(req.file);
-      console.log(dataAlojamiento);
+    } catch (error) {
+      next(error);
+    }
+  }
+
+  async function alojamientosBorrar(req, res, next) {
+    try {
+      await alojamientoProvider.deleteAlojamiento(req.query.id);
     } catch (error) {
       next(error);
     }
@@ -110,5 +116,6 @@ module.exports = {
     alojamientosHostales,
     alojamientosHoteles,
     alojamientosNuevo,
+    alojamientosBorrar
   };
   

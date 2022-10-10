@@ -11,6 +11,8 @@ app.get('', alojamientoController.alojamientosInfo);
 
 app.post('', upload.single('imageURL'), alojamientoController.alojamientosNuevo);
 
+app.delete('', alojamientoController.alojamientosBorrar);
+
 app.get('/images/:img', function(req, res){
     res.sendFile( __dirname+`/images/${img}` );
 });

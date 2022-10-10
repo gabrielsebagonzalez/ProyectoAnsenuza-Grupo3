@@ -89,6 +89,17 @@ async function createAlojamiento(dataAlojamiento) {
   return nuevoAlojamiento;
 }
 
+async function destroyAlojamiento(id) {
+  const alojamientos = await alojamientoModel.destroy(
+    {
+      where: {
+        id: id
+      }
+    });
+  
+  return alojamientos;
+}
+
 module.exports = {
   findAll,
   findApartamentos,
@@ -98,4 +109,5 @@ module.exports = {
   findHostales,
   findHoteles,
   createAlojamiento,
+  destroyAlojamiento,
 };
