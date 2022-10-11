@@ -1,0 +1,24 @@
+.wrap {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(/assets/img/alojamiento.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.text-wrap h1{
+  font-size: 6rem
+}
+
+@media(max-width: 768px) {
+  .text-wrap h1{
+    font-size: 3rem
+  }
+  .wrap {
+    height: 50vh;
+  }
+}

@@ -27,29 +27,29 @@ const routes: Routes = [
     canActivate: [],
     loadChildren: () => import('./modules/atractivos/atractivos.module').then(m => m.AtractivosModule),
   },
-    {
-      path: 'alojamientos',
-      canActivate: [],
-      loadChildren: () => import('./modules/alojamientos/alojamientos.module').then(m => m.AlojamientosModule),
-    },
-    {
-      path: 'agencias',
-      canActivate: [],
-      loadChildren: () => import('./modules/agencias/agencias.module').then(m => m.AgenciasModule),
-    },
-    {
-      path: 'actividades',
-      canActivate: [],
-      loadChildren: () => import('./modules/actividades/actividades.module').then(m => m.ActividadesModule),
-    },
-    {
-      path: 'footer',
-      canActivate: [],
-      loadChildren: () => import('./modules/footer/footer.module').then(m => m.FooterModule),
-    },
-    {path:'**',
-    redirectTo:'/',
-    pathMatch:'full' },
+  {
+    path: 'alojamientos',
+    canActivate: [],
+    loadChildren: () => import('./modules/alojamientos/alojamientos.module').then(m => m.AlojamientosModule),
+  },
+  {
+    path: 'agencias',
+    canActivate: [],
+    loadChildren: () => import('./modules/agencias/agencias.module').then(m => m.AgenciasModule),
+  },
+  {
+    path: 'actividades',
+    canActivate: [],
+    loadChildren: () => import('./modules/actividades/actividades.module').then(m => m.ActividadesModule),
+  },
+  {
+    path: 'footer',
+    canActivate: [],
+    loadChildren: () => import('./modules/footer/footer.module').then(m => m.FooterModule),
+  },
+  {path:'**',
+  redirectTo:'/',
+  pathMatch:'full' },
 ];
 
 @NgModule({

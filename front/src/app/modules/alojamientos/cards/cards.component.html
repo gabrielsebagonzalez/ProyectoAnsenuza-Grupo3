@@ -1,0 +1,20 @@
+<div class="mt-5">
+  <h1>Hoteles</h1>
+</div>
+
+<div class="cards-container">
+  <div class="row justify-content-evenly mt-5 mb-5 gy-5">
+    <div class="card" style="width: 18rem;" *ngFor="let item of dataCards">
+      <img [src]= "item.imageUrl" class="card-img-top" alt="fotos de hoteles">
+      <div class="card-body" >
+        <h3 class="card-title text-center">{{ item.title }}</h3>
+        <h6 class="card-text">Dirección: {{ item.address }}</h6>
+        <h6 class="card-text">Teléfono: {{ item.phone }}</h6>
+        <p class="card-text">{{ item.description }}</p>
+        <a href={{item.url}} class="btn btn-outline-primary" target="_blank">Ver más</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
