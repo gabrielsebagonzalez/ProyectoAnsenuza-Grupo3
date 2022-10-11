@@ -3,7 +3,7 @@ const logger = require('../../utils/winston.logger');
 
 const sequelizeOptions = {
   logging: (msg) => logger.api.debug(`Database: ${process.env.DB_DATABASE} - ${msg}`),
-  host: process.env.DB_HOST,
+  host: '127.0.0.1',
   port: process.env.DB_PORT,
   dialect: 'mysql',
   operatorsAliases: '0',

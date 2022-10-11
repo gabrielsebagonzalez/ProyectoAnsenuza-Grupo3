@@ -86,5 +86,6 @@ models.sequelize.authenticate()
     logger.api.error(err);
   });
 
-app.use('/', routes);
+app.use('/api', routes);
+
 module.exports = app;

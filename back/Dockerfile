@@ -44,7 +44,7 @@ RUN adduser -u $USER_ID appuser -S -h /app -G appgrp
 
 RUN chown $USER_ID:$GROUP_ID -R /app/dist/logs/
 # Run app as non root
-USER appuser
+USER root
 
 ENTRYPOINT ["./entrypoint.sh"]
 CMD ["serve"]
