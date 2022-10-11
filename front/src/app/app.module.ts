@@ -14,6 +14,7 @@ import { ActividadesModule} from './modules/actividades/actividades.module';
 import { HomeModule } from './modules/home/home.module';
 import { FooterModule } from './modules/footer/footer.module';
 import { CarouselModule } from './modules/carousel/carousel.module';
+import { LoginModule } from './modules/login/login.module';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { CarouselModule } from './modules/carousel/carousel.module';
     ActividadesModule,
     HomeModule,
     FooterModule,
-    CarouselModule
+    CarouselModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]

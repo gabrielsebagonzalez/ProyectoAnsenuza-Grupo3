@@ -11,6 +11,17 @@ const routes: Routes = [
     loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule),
   },
   {
+    path: 'auth',
+    canActivate: [],
+    loadChildren: () => import('./modules/login/login.module').then(m => m.LoginModule),
+  },
+  {
+    path: 'profile',
+    canActivate: [],
+    loadChildren: () => import('./modules/profile/profile.module').then(m => m.ProfileModule),
+  },
+
+  {
     path: 'navbar',
     canActivate: [],
     loadChildren: () => import('./modules/navbar/navbar.module').then(m => m.NavbarModule),
