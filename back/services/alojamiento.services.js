@@ -100,6 +100,21 @@ async function destroyAlojamiento(id) {
   return alojamientos;
 }
 
+async function updateAlojamiento(id) {
+  const alojamientos = await alojamientoModel.update(
+    {
+      name: 'update',
+      email: 'update@update',
+    },
+    {
+      where: {
+        id: id
+      }
+    });
+  
+  return alojamientos;
+}
+
 module.exports = {
   findAll,
   findApartamentos,
@@ -110,4 +125,5 @@ module.exports = {
   findHoteles,
   createAlojamiento,
   destroyAlojamiento,
+  updateAlojamiento,
 };

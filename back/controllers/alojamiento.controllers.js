@@ -107,6 +107,14 @@ const fs = require('fs');
     }
   }
 
+  async function alojamientosActualizar(req, res, next) {
+    try {
+      await alojamientoProvider.updateAlojamiento(req.query.id);
+    } catch (error) {
+      next(error);
+    }
+  }
+
 module.exports = {
     alojamientosInfo,
     alojamientosApartamentos,
@@ -116,6 +124,7 @@ module.exports = {
     alojamientosHostales,
     alojamientosHoteles,
     alojamientosNuevo,
-    alojamientosBorrar
+    alojamientosBorrar,
+    alojamientosActualizar
   };
   

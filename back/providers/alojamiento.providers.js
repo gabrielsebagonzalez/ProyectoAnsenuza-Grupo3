@@ -36,6 +36,10 @@ async function deleteAlojamiento(id) {
     return alojamientoService.destroyAlojamiento(id);
 }
 
+async function updateAlojamiento(id) {
+    return alojamientoService.updateAlojamiento(id);
+}
+
 module.exports = {
     getAll,
     getApartamentos,
@@ -46,4 +50,5 @@ module.exports = {
     getHoteles,
     setAlojamiento,
     deleteAlojamiento,
+    updateAlojamiento,
 };
