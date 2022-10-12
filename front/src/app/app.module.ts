@@ -32,7 +32,7 @@ import { CarouselModule } from './modules/carousel/carousel.module';
     AtractivosModule,
     ActividadesModule,
     HomeModule,
-    FooterModule
+    FooterModule,
     CarouselModule,
   ],
   providers: [],
