@@ -14,7 +14,6 @@ import { ActividadesModule} from './modules/actividades/actividades.module';
 import { HomeModule } from './modules/home/home.module';
 import { FooterModule } from './modules/footer/footer.module';
 import { CarouselModule } from './modules/carousel/carousel.module';
-import { FormularioComponent } from './modules/formulario/formulario/formulario.component';
 import { FormularioModule } from './modules/formulario/formulario.module';
 
 
