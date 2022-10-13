@@ -15,12 +15,8 @@ module.exports = (sequelize, DataTypes) => {
   };
   Gastronomia.init({
     name: DataTypes.STRING,
-    description: DataTypes.STRING,
     ubication: DataTypes.STRING,
     phoneNumber: DataTypes.STRING,
-    email: DataTypes.STRING,
-    web: DataTypes.STRING,
-    imageURL: DataTypes.STRING,
     tipoGastronomiaId: {
       type: DataTypes.INTEGER,
       allowNull: false

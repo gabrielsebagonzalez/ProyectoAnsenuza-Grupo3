@@ -11,22 +11,10 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
-      description: {
-        type: Sequelize.STRING
-      },
       ubication: {
         type: Sequelize.STRING
       },
       phoneNumber: {
-        type: Sequelize.STRING
-      },
-      email: {
-        type: Sequelize.STRING
-      },
-      web: {
-        type: Sequelize.STRING
-      },
-      imageURL: {
         type: Sequelize.STRING
       },
       tipoGastronomiaId: {
