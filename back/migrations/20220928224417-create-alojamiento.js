@@ -27,7 +27,7 @@ module.exports = {
         references: {
           model: 'TipoAlojamientos',
           key: 'id'
-     },
+        }
       },
       createdAt: {
         allowNull: false,

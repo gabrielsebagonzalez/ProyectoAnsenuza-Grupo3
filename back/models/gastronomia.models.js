@@ -1,7 +1,7 @@
-'use strict';
 const {
-  Model
+  Model,
 } = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
   class Gastronomia extends Model {
     /**
@@ -11,16 +11,20 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Gastronomia.belongsTo(models.TipoGastronomia,
+        {
+          foreignKey: 'tipoGastronomiaId',
+        });
     }
-  };
+  }
   Gastronomia.init({
     name: DataTypes.STRING,
     ubication: DataTypes.STRING,
     phoneNumber: DataTypes.STRING,
     tipoGastronomiaId: {
       type: DataTypes.INTEGER,
-      allowNull: false
-    }
+      allowNull: false,
+    },
   }, {
     sequelize,
     modelName: 'Gastronomia',
