@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FormularioComponent } from './modules/formulario/formulario/formulario.component';
 
 const routes: Routes = [
   {
@@ -47,6 +48,17 @@ const routes: Routes = [
     canActivate: [],
     loadChildren: () => import('./modules/footer/footer.module').then(m => m.FooterModule),
   },
+
+  {
+
+    path: "formulario",
+    component: FormularioComponent,
+    pathMatch: "full"
+
+  },
+
+
+
   {path:'**',
   redirectTo:'/',
   pathMatch:'full' },

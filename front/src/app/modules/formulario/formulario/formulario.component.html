@@ -3,67 +3,59 @@
   <h1>Bienvenido/a al formulario de Registración</h1>
   <h5 class="text-center">Por favor complete los campos solicitados de su alojamiento</h5>
 </div>
-<div class="container-fluid" [formGroup] = "form">
-  <div class="row">
-    <div class="col-6 mb-3">
-      <label for="formGroupExampleInput" class="form-label">Nombre</label>
-      <input formControlName="name" type="text" class="form-control" id="formGroupExampleInput" placeholder="nombre del alojamiento">
+<div class="container-fluid custom-form" [formGroup] = "form">
+  <div class="row ">
+    <div class="col-md-12 mb-3">
+      <input formControlName="name" type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre del alojamiento">
     </div>
   </div>
 
   <div class="row">
-    <div class="col-6 mb-3">
-      <label for="formGroupExampleInput2" class="form-label">Dirección</label>
-      <input formControlName="address" type="text" class="form-control" id="formGroupExampleInput2" placeholder="dirección">
+    <div class="col-md-12 mb-3">
+      <input formControlName="address" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Dirección">
     </div>
   </div>
 
   <div class="row">
-    <div class="col-6 mb-3">
-      <label for="formGroupExampleInput2" class="form-label">Teléfono</label>
-      <input formControlName="phone" type="text" class="form-control" id="formGroupExampleInput2" placeholder="teléfono">
+    <div class="col-md-12 mb-3">
+      <input formControlName="phone" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Teléfono">
     </div>
   </div>
 
   <div class="row">
-    <div class="col-6 mb-3">
-      <label for="formGroupExampleInput2" class="form-label">Email</label>
-      <input formControlName="email" type="text" class="form-control" id="formGroupExampleInput2" placeholder="email">
+    <div class="col-md-12 mb-3" >
+      <input formControlName="email" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Email">
     </div>
   </div>
 
   <div class="row">
-    <div class="col-6 mb-3">
-      <label for="formGroupExampleInput2" class="form-label">Web</label>
-      <input formControlName="web" type="text" class="form-control" id="formGroupExampleInput2" placeholder="sitio web">
+    <div class="col-md-12 mb-3">
+      <input formControlName="web" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Sitio web">
     </div>
   </div>
 
   <div class="row">
-    <div class="col-6 mb-3">
-      <label for="formGroupExampleInput2" class="form-label">Tipo</label>
-      <input formControlName="type" type="text" class="form-control" id="formGroupExampleInput2" placeholder="tipo de alojamiento">
+    <div class="col-md-12 mb-3">
+      <input formControlName="type" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Tipo de alojamiento">
     </div>
   </div>
 
   <div class="row">
-    <div class="col-6 mb-3">
-      <label for="formGroupExampleInput2" class="form-label">Imagen</label>
-      <input formControlName="image" type="text" class="form-control" id="formGroupExampleInput2" placeholder="imagen">
+    <div class="col-md-12 mb-3">
+      <input formControlName="image" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Imagen">
     </div>
   </div>
 
   <div class="row">
-    <div class="col-6 mb-3">
-      <label for="formGroupExampleInput2" class="form-label">Descripción</label>
-      <input formControlName="description" type="text" class="form-control" id="formGroupExampleInput2" placeholder="breve descripción">
+    <div class="col-md-12 mb-3">
+      <input formControlName="description" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Descripción">
     </div>
   </div>
 
   <div class="row">
-    <div class="mb-3">
+    <div class="mb-3 text-center">
       <button type="button" class="btn btn-primary" (click)="log()" [disabled]="form.invalid">Enviar</button>
     </div>
-
   </div>
 </div>
+
