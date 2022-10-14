@@ -19,7 +19,7 @@ module.exports = {
       },
       tipoGastronomiaId: {
         type: Sequelize.INTEGER,
-        allowNull: true,
+        allowNull: false,
         references: {
           model: 'TipoGastronomia',
           key: 'id'

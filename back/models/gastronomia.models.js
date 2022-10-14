@@ -14,6 +14,7 @@ module.exports = (sequelize, DataTypes) => {
       Gastronomia.belongsTo(models.TipoGastronomia,
         {
           foreignKey: 'tipoGastronomiaId',
+          as: 'tipoGastronomia',
         });
     }
   }
