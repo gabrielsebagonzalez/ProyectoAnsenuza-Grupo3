@@ -10,14 +10,17 @@ import { RegisterPageComponent } from './register-page/register-page.component';
 const routes: Routes = [
   {
     path: 'login',
-    canActivate: [NotLoggedInGuard],
+    canActivate: [],
     component: LoginPageComponent,
   },
   {
     path: 'register',
-    canActivate: [NotLoggedInGuard],
+    canActivate: [],
     component: RegisterPageComponent,
   },
+  {path:'**',
+  redirectTo:'login',
+},
 ];
 
 @NgModule({
