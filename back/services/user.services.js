@@ -5,6 +5,17 @@ async function findOne(data, attributes = null) {
   return user;
 }
 
+async function createUser(data) {
+  const newUser = await userModel.create(
+    data = {
+      username: data.username,
+      password: data.password,
+    }   
+  );
+  return newUser;
+}
+
 module.exports = {
   findOne,
+  createUser,
 };
