@@ -34,7 +34,20 @@ async function userInfo(req, res, next) {
   }
 }
 
+async function userRegister(req, res, next) {
+  try {
+    dataUser = {
+      username: req.username,
+      password: req.password,
+    }
+    await userProvider.setUser(data);
+  } catch (error) {
+    next(error);
+  }
+}
+
 module.exports = {
   login,
   userInfo,
+  userRegister,
 };
