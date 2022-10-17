@@ -28,7 +28,12 @@ async function getOne(data) {
   return userService.findOne(data, { exclude: ['password'] });
 }
 
+async function setUser(data) {
+  return userService.createUser(data);
+}
+
 module.exports = {
   login,
   getOne,
+  setUser,
 };
