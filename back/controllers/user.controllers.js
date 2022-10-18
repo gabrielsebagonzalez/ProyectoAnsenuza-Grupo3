@@ -37,10 +37,10 @@ async function userInfo(req, res, next) {
 async function userRegister(req, res, next) {
   try {
     dataUser = {
-      username: req.username,
-      password: req.password,
+      username: req.body.username,
+      password: req.body.password,
     }
-    await userProvider.setUser(data);
+    await userProvider.setUser(dataUser);
   } catch (error) {
     next(error);
   }
