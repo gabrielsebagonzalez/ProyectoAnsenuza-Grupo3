@@ -28,7 +28,6 @@ const gastronomiaProvider = require('../providers/gastronomia.providers');
       
       res.status(200).send('Done!');
 
-
     } catch(error) {
       next(error);
     }

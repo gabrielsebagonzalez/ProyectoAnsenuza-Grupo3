@@ -94,6 +94,8 @@ const fs = require('fs');
       
       await alojamientoProvider.setAlojamiento(dataAlojamiento);
       
+      res.status(200).send('Done!');
+      
     } catch (error) {
       next(error);
     }
