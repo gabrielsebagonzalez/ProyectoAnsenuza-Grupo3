@@ -16,6 +16,23 @@ const gastronomiaProvider = require('../providers/gastronomia.providers');
     }
   }
 
+  async function gastronomiaNuevo(req, res, next) {
+    try {
+      dataGastronomia = {
+        name: req.name,
+        ubication: req.ubication,
+        phoneNumber: req.phoneNumber,
+        tipoGastronomiaId: req.tipoGastronomiaId,
+
+
+      }
+    } catch(error) {
+      next(error)
+    }
+
+  }
+
 module.exports = {
-  gastronomiaInfo
+  gastronomiaInfo,
+  gastronomiaNuevo,
 };

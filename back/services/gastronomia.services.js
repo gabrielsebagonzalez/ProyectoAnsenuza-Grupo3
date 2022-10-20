@@ -14,7 +14,7 @@ async function createGastronomia(data) {
     data = {
       name: data.name,
       ubication: data.ubication,
-      phoneNUmber: data.phoneNumber,
+      phoneNumber: data.phoneNumber,
       tipoGastronomiaId: data.tipoGastronomiaId,
       createdAt: new Date(),
       updatedAt: new Date(),
