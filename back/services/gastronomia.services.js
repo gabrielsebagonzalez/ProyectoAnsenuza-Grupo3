@@ -9,6 +9,21 @@ async function findAll() {
   return gastronomias;
 }
 
+async function createGastronomia(data) {
+  const nuevaGastronomia = await gastronomiaModel.create(
+    data = {
+      name: data.name,
+      ubication: data.ubication,
+      phoneNUmber: data.phoneNumber,
+      tipoGastronomiaId: data.tipoGastronomiaId,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    }
+  );
+  return nuevaGastronomia;
+}
+
 module.exports = {
   findAll,
+  createGastronomia,
 };
