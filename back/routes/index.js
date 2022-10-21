@@ -9,8 +9,9 @@ const app = Express();
 // Rutas
 const userRoute = require('./user.routes');
 const alojamientosRoute = require('./alojamientos.routes');
+const gastronomiaRoute = require('./gastronomia.routes');
 
-// use=
+// use
 app.use('/ping', (_, res) => {
   res.json({
     response: 'pong!',
@@ -18,6 +19,8 @@ app.use('/ping', (_, res) => {
 });
 
 app.use('/alojamientos', alojamientosRoute);
+
+app.use('/gastronomias', gastronomiaRoute);
 
 app.use('/users', userRoute);
 

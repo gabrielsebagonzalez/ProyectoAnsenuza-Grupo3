@@ -13,7 +13,7 @@ app.post('', upload.single('imageURL'), alojamientoController.alojamientosNuevo)
 
 app.delete('', alojamientoController.alojamientosBorrar);
 
-app.update('', alojamientoController.alojamientosActualizar);
+app.put('', alojamientoController.alojamientosActualizar);
 
 app.get('/images/:img', function(req, res){
     res.sendFile( __dirname+`/images/${img}` );
