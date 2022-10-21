@@ -41,6 +41,9 @@ async function userRegister(req, res, next) {
       password: req.body.password,
     }
     await userProvider.setUser(dataUser);
+
+    res.status(200).send('Done!');
+    
   } catch (error) {
     next(error);
   }
