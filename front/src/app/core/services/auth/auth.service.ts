@@ -14,6 +14,7 @@ export class AuthService {
   public user!: User;
   private timer: Subscription = new Subscription;
 
+
   constructor(
     public http: ApiService,
     public cookieService: CookieService,

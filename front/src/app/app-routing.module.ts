@@ -49,13 +49,7 @@ const routes: Routes = [
     loadChildren: () => import('./modules/footer/footer.module').then(m => m.FooterModule),
   },
 
-  {
 
-    path: "formulario",
-    component: FormularioComponent,
-    pathMatch: "full"
-
-  },
 
 
 
@@ -69,3 +63,6 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+
+

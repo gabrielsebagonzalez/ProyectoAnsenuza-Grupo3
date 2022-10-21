@@ -17,9 +17,6 @@ import { CarouselModule } from './modules/carousel/carousel.module';
 import { FormularioModule } from './modules/formulario/formulario.module';
 
 
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,3 +42,6 @@ import { FormularioModule } from './modules/formulario/formulario.module';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+

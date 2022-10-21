@@ -17,6 +17,15 @@
   margin-top: 2rem;
 }
 
+.ng-touched.ng-invalid:is(input, textarea),
+.ng-dirty.ng-invalid:is(input, textarea) {
+  outline: 2px solid tomato;
+}
+
+.error-msg {
+  color: tomato;
+}
+
 
 
 

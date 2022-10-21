@@ -18,13 +18,17 @@
 
   <div class="row">
     <div class="col-md-12 mb-3">
-      <input formControlName="phone" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Teléfono">
+      <input formControlName="phoneNumber" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Teléfono">
     </div>
   </div>
 
   <div class="row">
     <div class="col-md-12 mb-3" >
       <input formControlName="email" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Email">
+    </div>
+    <div class="error-container" *ngIf="emailControl.invalid && (emailControl.touched || emailControl.dirty)">
+      <p class="error-msg" *ngIf="emailControl.hasError('required')">El campo es obligatorio</p>
+      <p class="error-msg" *ngIf="emailControl.hasError('email')">El campo debe ser un email válido</p>
     </div>
   </div>
 
@@ -36,13 +40,13 @@
 
   <div class="row">
     <div class="col-md-12 mb-3">
-      <input formControlName="type" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Tipo de alojamiento">
+      <input formControlName="typeAlojamientoId" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Tipo de alojamiento">
     </div>
   </div>
 
   <div class="row">
     <div class="col-md-12 mb-3">
-      <input formControlName="image" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Imagen">
+      <input formControlName="imageURL" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Imagen">
     </div>
   </div>
 
