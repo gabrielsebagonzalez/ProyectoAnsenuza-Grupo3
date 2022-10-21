@@ -84,15 +84,17 @@ const fs = require('fs');
       dataAlojamiento = {
         name: req.body.name,
         description: req.body.description,
-        ubication: req.body.ubication,
+        ubication: req.body.address,
         phoneNumber: req.body.phoneNumber,
-        tipoAlojamientoId: Number(req.body.tipoAlojamientoId),
+        tipoAlojamientoId: Number(req.body.typeAlojamientoId),
         email: req.body.email,
         web: req.body.web,
         imageURL: `${pathFile}.png`,
       }
       
       await alojamientoProvider.setAlojamiento(dataAlojamiento);
+      
+      res.status(200).send('Done!');
       
     } catch (error) {
       next(error);
