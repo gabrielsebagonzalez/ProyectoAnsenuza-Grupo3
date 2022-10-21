@@ -3,7 +3,7 @@
     <form [formGroup]="loginForm" (ngSubmit)="loginForm.valid && login()">
       <h2>Log In</h2>
       <mat-form-field class="full-width-input">
-        <input matInput placeholder="Username" formControlName="username" required>
+        <input matInput placeholder="Usuario" formControlName="username" required>
         <mat-error *ngIf="loginForm.controls.username?.errors?.required">
           El nombre de usuario es requerido.
         </mat-error>
@@ -18,7 +18,7 @@
         </mat-error>
       </mat-form-field>
       <mat-form-field class="full-width-input">
-        <input matInput type="password" placeholder="Password" formControlName="password" required>
+        <input matInput type="password" placeholder="Contraseña" formControlName="password" required>
         <mat-error *ngIf="loginForm.controls.password?.errors?.required">
           La contraseña es requerida.
         </mat-error>
@@ -34,3 +34,4 @@
     </form>
   </mat-card-content>
 </mat-card>
+

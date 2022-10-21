@@ -16,17 +16,17 @@
         </mat-error>
       </mat-form-field>
       <mat-form-field class="full-width">
-        <mat-label>Password</mat-label>
+        <mat-label>Contraseña</mat-label>
         <input matInput placeholder="Password" type="password" formControlName="password" />
         <mat-error *ngIf="registerForm.controls.password?.errors?.required">
-          El password es requerido.
+          La contraseña es requerida.
         </mat-error>
         <mat-error *ngIf="registerForm.controls.password?.errors?.pattern">
-          El password debe contener 5 carecteres como mínimo y al menos una letra minuscula, una letra mayuscula, un número y un caracter especial.
+          La contraseña debe contener 5 carecteres como mínimo y al menos una letra minuscula, una letra mayuscula, un número y un caracter especial.
         </mat-error>
       </mat-form-field>
       <mat-card-actions>
-        <a mat-raised-button routerLink="/home">Cancel</a>
+        <a mat-raised-button routerLink="/home">Cancelar</a>
         <button mat-raised-button color="primary" [disabled]="registerForm.invalid" routerLink="/auth/login">Registrar</button>
       </mat-card-actions>
     </form>

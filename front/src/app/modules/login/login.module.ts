@@ -15,6 +15,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
+import { FormsModule } from "@angular/forms"
+
 import { LoginRoutingModule } from './login-routing.module';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { RegisterPageComponent } from './register-page/register-page.component';
@@ -48,6 +50,7 @@ import { RegisterPageComponent } from './register-page/register-page.component';
     MatSelectModule,
     MatOptionModule,
     MatProgressSpinnerModule,
+    FormsModule
   ],
   providers: []
 })
