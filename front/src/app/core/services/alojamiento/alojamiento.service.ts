@@ -9,14 +9,14 @@ import { UserService } from '../user/user.service';
 })
 export class AlojamientoService {
 
-  url = 'https://5fbd3e443f8f90001638ce90.mockapi.io/User'
+  url = 'https://localhost:4001/api/alojamientos'
 
   constructor(
     private http: HttpClient
   ) { }
 
   public getAlojamiento(): Observable<Alojamiento[]> {
-    return this.http.get<Alojamiento[]>('https://5fbd3e443f8f90001638ce90.mockapi.io/User');
+    return this.http.get<Alojamiento[]>(this.url);
   }
 
   public saveAlojamiento(aloj: Alojamiento): Observable<Alojamiento> {
