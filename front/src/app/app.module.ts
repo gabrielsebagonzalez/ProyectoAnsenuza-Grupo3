@@ -34,7 +34,7 @@ import { FormularioModule } from './modules/formulario/formulario.module';
     AtractivosModule,
     ActividadesModule,
     HomeModule,
-    FooterModule,,
+    FooterModule,
     CarouselModule,
     LoginModule,
     FormularioModule,
