@@ -17,6 +17,7 @@ export class AlojamientoService {
 
   public getAlojamiento(): Observable<Alojamiento[]> {
     return this.http.get<Alojamiento[]>(this.url);
+    console.log()
   }
 
   public saveAlojamiento(aloj: Alojamiento): Observable<Alojamiento> {
