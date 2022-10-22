@@ -5,13 +5,14 @@ import { NavbarRoutingModule } from './navbar-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
 
 
+
 @NgModule({
   declarations: [
     NavbarComponent
   ],
   imports: [
     CommonModule,
-    NavbarRoutingModule
+    NavbarRoutingModule,
   ],
   exports:[
     NavbarComponent

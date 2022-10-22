@@ -1,15 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FormularioComponent } from '../formulario/formulario/formulario.component';
 import { AlojamientosComponent } from './alojamientos/alojamientos.component';
 
 const routes: Routes = [
   {
     path: '',
     component: AlojamientosComponent,
-    children: [
+    children: []
+  },
 
-    ]
-  }
+  {
+    path: "formulario",
+    component: FormularioComponent,
+  },
+
 ];
 
 @NgModule({
@@ -17,3 +22,7 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AlojamientosRoutingModule { }
+
+
+
+

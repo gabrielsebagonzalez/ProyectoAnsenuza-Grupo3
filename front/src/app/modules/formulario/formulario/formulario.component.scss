@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+.custom-form {
+  min-width: 300px;
+  max-width: 40%;
+  margin: 0px auto;
+  padding: 2rem 3rem;
+  margin: auto;
+  border-radius: 2.5rem;
+  box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+  background: #D3CCE3;
+  background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);
+  background: linear-gradient(to right, #E9E4F0, #D3CCE3);
+  color: black;
+  margin-top: 2rem;
+}
+
+.ng-touched.ng-invalid:is(input, textarea),
+.ng-dirty.ng-invalid:is(input, textarea) {
+  outline: 2px solid tomato;
+}
+
+.error-msg {
+  color: tomato;
+}
+
+
+
+
+

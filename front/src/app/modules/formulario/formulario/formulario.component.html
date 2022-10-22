@@ -1,0 +1,65 @@
+
+<div>
+  <h1>Bienvenido/a al formulario de Registración</h1>
+  <h5 class="text-center">Por favor complete los campos solicitados de su alojamiento</h5>
+</div>
+<div class="container-fluid custom-form" [formGroup] = "form">
+  <div class="row ">
+    <div class="col-md-12 mb-3">
+      <input formControlName="name" type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre del alojamiento">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 mb-3">
+      <input formControlName="address" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Dirección">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 mb-3">
+      <input formControlName="phoneNumber" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Teléfono">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 mb-3" >
+      <input formControlName="email" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Email">
+    </div>
+    <div class="error-container" *ngIf="emailControl.invalid && (emailControl.touched || emailControl.dirty)">
+      <p class="error-msg" *ngIf="emailControl.hasError('required')">El campo es obligatorio</p>
+      <p class="error-msg" *ngIf="emailControl.hasError('email')">El campo debe ser un email válido</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 mb-3">
+      <input formControlName="web" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Sitio web">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 mb-3">
+      <input formControlName="typeAlojamientoId" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Tipo de alojamiento">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 mb-3">
+      <input formControlName="imageURL" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Imagen">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 mb-3">
+      <input formControlName="description" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Descripción">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="mb-3 text-center">
+      <button type="button" class="btn btn-primary" (click)="log()" [disabled]="form.invalid">Enviar</button>
+    </div>
+  </div>
+</div>
+
