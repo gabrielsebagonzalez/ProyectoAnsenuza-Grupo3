@@ -14,7 +14,6 @@ import { ActividadesModule} from './modules/actividades/actividades.module';
 import { HomeModule } from './modules/home/home.module';
 import { FooterModule } from './modules/footer/footer.module';
 import { CarouselModule } from './modules/carousel/carousel.module';
-import { FormularioModule } from './modules/formulario/formulario.module';
 
 
 @NgModule({
@@ -33,8 +32,9 @@ import { FormularioModule } from './modules/formulario/formulario.module';
     AtractivosModule,
     ActividadesModule,
     HomeModule,
-    FooterModule,
+    FooterModule,,
     CarouselModule,
+    LoginModule
     FormularioModule
 
   ],
