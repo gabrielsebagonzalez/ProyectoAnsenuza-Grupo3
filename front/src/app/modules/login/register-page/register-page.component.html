@@ -26,8 +26,8 @@
         </mat-error>
       </mat-form-field>
       <mat-card-actions>
-        <a mat-raised-button routerLink="/home">Cancelar</a>
-        <button mat-raised-button color="primary" [disabled]="registerForm.invalid" routerLink="/auth/login">Registrar</button>
+        <a mat-raised-button routerLink="/home" class="buttonCan">Cancelar</a>
+        <button mat-raised-button class="buttonReg" [disabled]="registerForm.invalid" routerLink="/auth/login">Registrar</button>
       </mat-card-actions>
     </form>
   </mat-card-content>

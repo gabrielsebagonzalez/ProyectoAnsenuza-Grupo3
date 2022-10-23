@@ -9,6 +9,7 @@ import { IglesiasComponent } from './iglesias/iglesias.component';
 import { RinconesComponent } from './rincones/rincones.component';
 import { ParquesComponent } from './parques/parques.component';
 import { MuseosComponent } from './museos/museos.component';
+import { PortadaComponent } from './portada/portada.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { MuseosComponent } from './museos/museos.component';
     IglesiasComponent,
     RinconesComponent,
     ParquesComponent,
-    MuseosComponent
+    MuseosComponent,
+    PortadaComponent
   ],
   imports: [
     CommonModule,

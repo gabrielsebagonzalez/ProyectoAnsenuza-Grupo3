@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { GastronomiaRoutingModule } from './gastronomia-routing.module';
 import { GastronomiaComponent } from './gastronomia/gastronomia.component';
+import { PortadaComponent } from './portada/portada.component';
 
 
 @NgModule({
   declarations: [
-    GastronomiaComponent
+    GastronomiaComponent,
+    PortadaComponent
   ],
   imports: [
     CommonModule,
