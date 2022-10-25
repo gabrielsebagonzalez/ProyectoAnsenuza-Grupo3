@@ -42,7 +42,7 @@ async function userRegister(req, res, next) {
     }
     await userProvider.setUser(dataUser);
 
-    res.status(200).send('Done!');
+    res.status(200).send({message:"Done"});
     
   } catch (error) {
     next(error);

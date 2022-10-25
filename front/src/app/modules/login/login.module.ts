@@ -20,6 +20,7 @@ import { FormsModule } from "@angular/forms"
 import { LoginRoutingModule } from './login-routing.module';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { RegisterPageComponent } from './register-page/register-page.component';
+import { UserService } from 'src/app/core/services/user/user.service';
 
 
 @NgModule({
@@ -52,6 +53,6 @@ import { RegisterPageComponent } from './register-page/register-page.component';
     MatProgressSpinnerModule,
     FormsModule
   ],
-  providers: []
+  providers: [UserService]
 })
 export class LoginModule { }

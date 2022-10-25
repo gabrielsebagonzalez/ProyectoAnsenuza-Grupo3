@@ -11,4 +11,13 @@ export class UserService {
   getProfile(): Observable<User> {
     return this.apiService.get<User>('users/myInfo');
   }
+
+  register(saveUser: SaveUsuario): Observable<SaveUsuario> {
+    return this.apiService.post<SaveUsuario>('users', saveUser);
+  }
+}
+
+export interface SaveUsuario {
+  username: string;
+  password: string;
 }

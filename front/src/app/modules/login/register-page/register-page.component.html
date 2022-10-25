@@ -1,6 +1,6 @@
 <mat-card class="my-card">
   <mat-card-content>
-    <form [formGroup]="registerForm" (onSubmit)="register()">
+    <form [formGroup]="registerForm">
       <h2>Registrar</h2>
       <mat-form-field class="full-width">
         <mat-label>Usuario</mat-label>
@@ -27,7 +27,7 @@
       </mat-form-field>
       <mat-card-actions>
         <a mat-raised-button routerLink="/home">Cancelar</a>
-        <button mat-raised-button color="primary" [disabled]="registerForm.invalid" routerLink="/auth/login">Registrar</button>
+        <button mat-raised-button color="primary" (click)="register()" [disabled]="registerForm.invalid">Registrar</button>
       </mat-card-actions>
     </form>
   </mat-card-content>
