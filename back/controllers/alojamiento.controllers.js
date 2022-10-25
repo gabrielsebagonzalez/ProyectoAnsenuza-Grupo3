@@ -73,7 +73,8 @@ const fs = require('fs');
   
   async function alojamientosNuevo(req, res, next) {
 
-    const pathFile = req.file.path;
+    //TODO
+    const pathFile = "assets/img/alojamiento";//req.file.path;
 
     try {
 
@@ -94,7 +95,7 @@ const fs = require('fs');
       
       await alojamientoProvider.setAlojamiento(dataAlojamiento);
       
-      res.status(200).send('Done!');
+      res.status(200).send({message:"done"});
       
     } catch (error) {
       next(error);

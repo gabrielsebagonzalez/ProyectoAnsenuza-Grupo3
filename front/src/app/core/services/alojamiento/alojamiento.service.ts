@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { ApiService } from '../../http/api.service';
 import { UserService } from '../user/user.service';
 
 
@@ -9,30 +10,30 @@ import { UserService } from '../user/user.service';
 })
 export class AlojamientoService {
 
-  url = 'https://localhost:4001/api/alojamientos'
+  url = 'alojamientos'
 
   constructor(
-    private http: HttpClient
+    private http: ApiService
   ) { }
 
   public getAlojamiento(): Observable<Alojamiento[]> {
     return this.http.get<Alojamiento[]>(this.url);
-    console.log()
   }
 
   public saveAlojamiento(aloj: Alojamiento): Observable<Alojamiento> {
     return this.http.post<Alojamiento>(this.url, aloj)
   }
+  
 }
-
-
 export interface Alojamiento {
   name: string;
   address: string;
   phoneNumber: string;
   email: string;
   web: string;
-  typeAlojamientoId: string;
+  typeAlojamientoId: number;
   imageURL: string;
   description: string
 }
+
+

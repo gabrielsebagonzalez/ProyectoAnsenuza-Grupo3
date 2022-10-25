@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AlojamientoService } from 'src/app/core/services/alojamiento/alojamiento.service';
+import { ToastService } from 'src/app/core/services/toast/toast.service';
 
 @Component({
   selector: 'app-cards',
@@ -6,8 +8,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cards.component.scss']
 })
 export class CardsComponent implements OnInit {
+  dataCards:any;
+  
+constructor(    
+  public alojamientoService: AlojamientoService,
+  public toastService : ToastService
+  ) {
+    this.alojamientoService.getAlojamiento().subscribe(
+      (res: any) => {
+        console.log(res);
+        this.dataCards = res;
+      },
+      (err) => {
+        this.toastService.presentToast("Ocurrio un error al cargar los alojamientos");
+      }
+    );
 
-  dataCards = [
+}
+
+  /* dataCards = [
     {
       title: "Sarmiento",
       address: "Sarmiento 131",
@@ -45,7 +64,7 @@ export class CardsComponent implements OnInit {
       url:"http://www.hostalmorteros.com.ar"
     },
 
-  ];
+  ]; */
 
 
 

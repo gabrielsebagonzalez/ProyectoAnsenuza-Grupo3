@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AlojamientoService } from 'src/app/core/services/alojamiento/alojamiento.service';
+import { AlojamientoService} from 'src/app/core/services/alojamiento/alojamiento.service';
+import { ToastService } from 'src/app/core/services/toast/toast.service';
 
 @Component({
   selector: 'app-formulario',
@@ -11,13 +12,23 @@ import { AlojamientoService } from 'src/app/core/services/alojamiento/alojamient
 export class FormularioComponent implements OnInit {
 
   form: FormGroup;
-
+  typesAlojamiento:any;
+  fileToUpload: File | null = null;
   constructor(
     public alojamientoService: AlojamientoService,
     private formBuilder: FormBuilder,
-    private router: Router
+    private router: Router,
+    private toastService:ToastService,
 
   ) {
+    this.typesAlojamiento = [
+      {id:1,name:"Hotel"},
+      {id:2,name:"Apartamento"},
+      {id:3,name:"Casa"},
+      {id:4,name:"Cabaña"},
+      {id:5,name:"Hostal"},
+      {id:6,name:"Camping"},
+    ];
 
     this.form = formBuilder.group({
       name: new FormControl('', Validators.required),
@@ -25,7 +36,7 @@ export class FormularioComponent implements OnInit {
       phoneNumber: new FormControl('', Validators.required),
       email: new FormControl('', [Validators.required, Validators.email]),
       web: new FormControl(''),
-      typeAlojamientoId: new FormControl('', Validators.required),
+      typeAlojamientoId: new FormControl(1, Validators.required),
       imageURL: new FormControl(''),
       description: new FormControl('', Validators.required)
     })
@@ -43,19 +54,23 @@ export class FormularioComponent implements OnInit {
     console.log(this.form.getRawValue())
   }
 
+  processFile(files: any[]) {
+}
+
   onSave():void {
     if(this.form.invalid) {
       return;
     }
-    this.alojamientoService.saveAlojamiento(this.form.getRawValue()).subscribe({
-      next:(value) => {
-        this.router.navigate(['alojamientos'])
+    this.alojamientoService.saveAlojamiento(this.form.getRawValue())
+    .subscribe(
+      (res: any) => {
+        this.toastService.presentToast("Creado correctamente");
+        this.router.navigateByUrl('alojamientos');
       },
-      error: err => {
-        alert("Ha ocurrido un error")
+      (err) => {
+        console.log(err)
+        this.toastService.presentToast("Ocurrio un error");
       }
-    })
+    )
   }
-
-
 }
