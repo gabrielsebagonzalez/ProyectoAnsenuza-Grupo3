@@ -13,9 +13,11 @@
   transform: scale(1.05)
 }
 
-h1 {
+h2 {
   margin-top: 100px;
   color:#757575;
+  display: flex;
+  justify-content: center;
 }
 
 .card-body{
