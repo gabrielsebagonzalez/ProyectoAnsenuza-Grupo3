@@ -1,5 +1,5 @@
 <app-portada></app-portada>
-<div class=" mt-3 mx-3 text-end">
+<div *ngIf="isLogged" class=" mt-3 mx-3 text-end">
   <button routerLink="formulario" class="boton btn ">Registrar Establecimiento</button>
 </div>
 <app-cards></app-cards>
