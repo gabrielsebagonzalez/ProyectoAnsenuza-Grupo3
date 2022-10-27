@@ -1,6 +1,6 @@
 .title{
   margin-top: 100px;
-  color:#757575;
+  color:#775577;
 }
 
 h3{
@@ -59,15 +59,26 @@ p{
 
 section a{
   text-decoration: none;
-  color: #757575;
+  color: #775577;
+  font-weight: bold;
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-self: center;
 }
 
-section img{
+section  a img{
+  display: flex;
+  justify-content: center;
   padding: 20px;
   transition: all 1s;
+
+}
+
+.iconStyle{
+  display: flex;
+  justify-content: center;
+  margin:0px;
 }
 
 section img:hover{
@@ -93,6 +104,4 @@ section img:hover{
   justify-content:space-evenly;
 }
 
-.contenedor-imagenes img:first-child {
-  margin-right: 10px;
-}
+

@@ -50,7 +50,7 @@ constructor(
       address:"España 1466",
       phone:"03562-402714",
       imageUrl: "assets/img/Espana.png",
-      description: "Tenemos más de 15 años de experiencia, brindando a nuestros huéspedes una excelente atención personalizada a la altura de sus necesidades.",
+      description: "Tenemos más de 15 años de experiencia, brindando a nuestros huéspedes una excelente atención a la altura de sus necesidades.",
       url:"http://www.hotelespanamorteros.com/"
     },
 
@@ -59,7 +59,7 @@ constructor(
       address: "BV. Hipólito Irigoyen 1203",
       phone:"03562-422440",
       imageUrl: "assets/img/Hostal del Sol.png",
-      description: "Ofrece a sus huéspedes una experiencia de verdadera calidad, combinando asi una atención personalizada. Un muy buen lugar para descansar.",
+      description: "Ofrece a sus huéspedes una experiencia de verdadera calidad con atención personalizada. Un muy buen lugar para descansar.",
       url:"http://www.hostalmorteros.com.ar"
     },
 
