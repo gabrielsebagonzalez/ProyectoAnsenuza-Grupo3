@@ -9,8 +9,8 @@ import { ToastService } from 'src/app/core/services/toast/toast.service';
 })
 export class CardsComponent implements OnInit {
   dataCards:any;
-  
-constructor(    
+
+constructor(
   public alojamientoService: AlojamientoService,
   public toastService : ToastService
   ) {
@@ -25,8 +25,7 @@ constructor(
     );
 
 }
-
-  /* dataCards = [
+  cards = [
     {
       title: "Sarmiento",
       address: "Sarmiento 131",
@@ -64,7 +63,7 @@ constructor(
       url:"http://www.hostalmorteros.com.ar"
     },
 
-  ]; */
+  ];
 
 
 

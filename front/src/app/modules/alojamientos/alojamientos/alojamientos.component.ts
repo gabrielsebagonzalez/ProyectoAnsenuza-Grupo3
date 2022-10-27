@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/core/services/auth/auth.service';
 
+
 @Component({
   selector: 'app-alojamientos',
   templateUrl: './alojamientos.component.html',
@@ -8,10 +9,20 @@ import { AuthService } from 'src/app/core/services/auth/auth.service';
 })
 export class AlojamientosComponent implements OnInit {
 
-  constructor() {
+  isLogged: boolean;
+
+
+  constructor(
+    public authService: AuthService,
+  ) {
+
+    this.isLogged = authService.isLoggedIn()
+
   }
 
   ngOnInit(): void {
   }
 
 }
+
+

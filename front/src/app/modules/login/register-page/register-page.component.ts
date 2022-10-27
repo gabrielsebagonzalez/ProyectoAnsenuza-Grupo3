@@ -49,7 +49,7 @@ export class RegisterPageComponent implements OnInit {
     .subscribe(
       (res: any) => {
         this.toastService.presentToast("Creado correctamente");
-        this.router.navigateByUrl('alojamientos');
+        this.router.navigateByUrl('auth');
       },
       (err) => {
         console.log(err)

@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { FormularioModule } from '../formulario/formulario.module';
 
 
+
 @NgModule({
   declarations: [
     AlojamientosComponent,
@@ -26,7 +27,7 @@ import { FormularioModule } from '../formulario/formulario.module';
     PortadaComponent,
     CardsComponent,
 
-  ]
+  ],
 })
 export class AlojamientosModule { }
 

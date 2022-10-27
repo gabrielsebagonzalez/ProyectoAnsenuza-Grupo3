@@ -49,6 +49,7 @@ export class LoginPageComponent implements OnInit, OnDestroy {
         .subscribe(
           (res: any) => {
             this.authService.setUser(res);
+            this.toastService.presentToast("Usuario conectado exitosamente")
             this.router.navigateByUrl('/dashboard');
 
           },
