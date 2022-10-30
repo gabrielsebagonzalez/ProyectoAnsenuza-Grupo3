@@ -1,7 +1,20 @@
 .cards{
   margin-top: 35px;
+
+}
+
+.card{
+  box-shadow: 2px 4px 10px gray;
+  cursor: pointer;
+  transition: all 0.50s;
+}
+
+.card:hover {
+  transform: scale(1.03)
 }
 
 h5{
   color: #757575;
 }
+
+
